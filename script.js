@@ -17,3 +17,15 @@ document.querySelector('.button_right').addEventListener('click', function(){
     }
     sliderLine.style.left = offset + 'px';
 });
+
+const modal = $.modal({
+    title: 'Выберите локацию',
+    closable: true,
+    content: `<h3>Выберите локацию</h3>`,
+    width: '600px'
+
+});
+
+document.querySelector('.change_location').addEventListener('click', function(){
+    return modal.open()
+})
